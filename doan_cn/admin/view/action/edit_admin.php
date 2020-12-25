@@ -46,7 +46,7 @@ if (!isset($_GET["id"]))
 		 <input class="input_readonly" readonly type="text" name="ID" value="<?php echo $data["adMa"] ?>" />
 		<br/> <br/>
 		 <span>Tên tài khoản</span><br/>
-		 <input readonly type="text" name="username"value="<?php echo $data["adTen"] ?>"/>
+		 <input  type="text" name="username"value="<?php echo $data["adTen"] ?>"/>
 		<br/> <br/>
 		 <span>Email</span><br/>
 		 <input type="email" name="email"value="<?php echo $data["adEmail"] ?>"/>
@@ -55,13 +55,23 @@ if (!isset($_GET["id"]))
 		 <input type="text" name="password" value="<?php echo $data["adMatkhau"] ?>"/>
 		<br/> <br/>
 		 <span>Quyền</span><br/>
-		 <input readonly type="number" name="permission" value="<?php echo $data["adQuyen"] ?>"/>
+		 <input  type="number" name="permission" value="<?php echo $data["adQuyen"] ?>"/>
 		<br/><br/>
 			 <span>Tình trạng</span><br/>
 		 <input type="number" name="tinhtrang" value="<?php echo $data["adTinhtrang"] ?>"/>
 		<br/><br/>
 		<div class="form__space">
-		 <button class="btn__edit" type="submit" name="btn_edit">Cập nhật</button>
+			<?php 
+			 if($_SESSION["admin"]["adQuyen"] == 1)
+			 {
+			 	echo '<button class="btn__edit" type="submit" name="btn_edit">Cập nhật</button>';
+			 }
+			 else
+			 {
+			 	echo "";
+			 }
+			 ?>
+		
 	    </div>
 	</form>
 </div>
