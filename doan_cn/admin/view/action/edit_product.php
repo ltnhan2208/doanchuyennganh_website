@@ -42,6 +42,11 @@
 		    			$sql1 = "UPDATE tbl_sanpham SET spMota='$moTa'where spMa='$ID' "; 
 					         $query1 = mysqli_query($conn, $sql1);
 				}
+				if(isset($tinhTrang))
+	    		{
+		    			$sql1 = "UPDATE tbl_sanpham SET spTinhtrang='$tinhTrang'where spMa='$ID' "; 
+					         $query1 = mysqli_query($conn, $sql1);
+				}
 		      	if($gia < 0)
 	    		{
 	    			?>
