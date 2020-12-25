@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`adMa`, `adTen`, `adEmail`, `adMatkhau`, `adQuyen`, `adTinhtrang`) VALUES
-(7, 'master', 'b@b.com', '202cb962ac59075b964b07152d234b70', 165, 0),
+(7, 'master', 'b@b.com', '202cb962ac59075b964b07152d234b70', 1, 0),
 (8, 'ad', 'das@a.co', 'c4ca4238a0b923820dcc509a6f75849b', 121, 0),
 (9, 'moi', 'moi@moi.com', 'c4ca4238a0b923820dcc509a6f75849b', 165, 0),
 (11, 'moi3', 'm@m.c', 'c4ca4238a0b923820dcc509a6f75849b', 100, 0),
