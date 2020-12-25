@@ -6,11 +6,9 @@
       	$email = $_POST["email"];
       	$password = md5($_POST["password"]);
       	$tinhtrang=$_POST["tinhtrang"];
-      	if($_POST["adQuyen"]==165)
-      	{
-      		$quyen=$_POST["adQuyen"];
-      	}
-      	if($username=="" || $email=="" || $password=="" )
+      	$adQuyen= $_POST["adQuyen"];
+      	
+      	if($username=="" || $email=="" || $password=="" ||$adQuyen == "" )
       	{
       		?>
                      <script>
@@ -19,15 +17,9 @@
                      </script>
                      <?php
       	}
-      	else if(isset($quyen))
-      	{
-      		$sql = "INSERT INTO tbl_admin(adMa, adTen,adEmail , adMatkhau, adQuyen,adTinhtrang) values (null, '$username','$email' , '$password', '$quyen','$tinhtrang')";
-      		$query = mysqli_query($conn, $sql);
-      		echo "Thêm thành công";
-      	}
       	else
       	{
-      		$sql = "INSERT INTO tbl_admin(adMa, adTen,adEmail , adMatkhau, adQuyen,adTinhtrang) values (null, '$username','$email' , '$password', 100,'$tinhtrang')";
+      		$sql = "INSERT INTO tbl_admin(adMa, adTen,adEmail , adMatkhau, adQuyen,adTinhtrang) values (null, '$username','$email' , '$password', '$adQuyen','$tinhtrang')";
       		$query = mysqli_query($conn, $sql);
       		echo '<p>Thêm thành công!, <a href="index.php?quanly=tbl_admin">quay lại trang trước</a></p>';
       	}
