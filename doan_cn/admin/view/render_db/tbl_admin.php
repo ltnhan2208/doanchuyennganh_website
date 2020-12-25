@@ -121,7 +121,16 @@ if(isset($_GET['id_lock']))
 
 <!------------------------>
 <br/>
-<a href="index.php?hanhdong=add_admin" class="add"><i class="fas fa-plus" style="font-size: 20px;color:white"></i>&nbsp;ADD</a>
+<?php 
+ if($_SESSION["admin"]["adQuyen"] == 1)
+{
+ echo '<a href="index.php?hanhdong=add_admin" class="add"><i class="fas fa-plus" style="font-size: 20px;color:white"></i>&nbsp;ADD</a>
+ '; } 
+ else
+ {
+ 	echo "";
+ }
+ ?>
 <br/><br/>
 <div class="box__tbl">
 
