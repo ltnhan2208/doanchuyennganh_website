@@ -1,4 +1,5 @@
 <?php include("includes/connection.php");
+error_reporting(0);
 	if (!isset($_GET["id"]))
                         {
                         //If not isset -> set with dumy value

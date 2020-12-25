@@ -12,7 +12,6 @@
 	    	$gia = $_POST["gia"];
 	    	$tinhTrang = $_POST["tinhTrang"];
 	    	$loaiMa = $_POST["loaiMa"];
-	    	
 	    	$maTh = $_POST["maTh"];
 	    	//hinh//
 	    	$img = $_FILES["hinh"]["name"];
@@ -20,6 +19,8 @@
 	    	$allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png",""=>"image/''");
     		$test = pathinfo($img, PATHINFO_EXTENSION);
 	    	//end hinh//
+	    	
+	    	
 	    	if($ID ==""|| $name ==""||$gia==""||$moTa ==""||$tinhTrang=="")
 	    	{
 	    		?>
@@ -31,50 +32,67 @@
 	    	}
 	    	else
 	    	{
-	      	if($gia < 0)
-    		{
-    			echo "Giá không được nhỏ hơn 0";
-    		}
-    		else
-    		{
-	    			if(!array_key_exists($test, $allowed)) 
-			    	{
-			    		?>
-			    		<script>
-			    			alert("Vui lòng chọn đúng file ảnh");
-			    			window.history.back();
-			    		</script>
-			    		<?php
-			    	
-			    	}
-			    	else
-			    	{
-	    			if($img != null)
-		      		{		
-		      			$tmp_img = $_FILES["hinh"]["tmp_name"];
-			      		$img = $_FILES['hinh']['name'];
-			      		move_uploaded_file($tmp_img, $path);
-			      		$sql = "UPDATE tbl_sanpham SET spHinh ='$img' where spMa='$ID' ";
-			      		$query = mysqli_query($conn, $sql);	
-		      		}
-		      		if($loaiMa!=null)
-		      		{
-		      			$sql1 = "UPDATE tbl_sanpham SET spMa='$ID',spTen= '$name' ,spMota='$moTa', spGia='$gia',spTinhtrang='$tinhTrang'where spMa='$ID' "; 
-				         $query1 = mysqli_query($conn, $sql1);
-		      		}
-		      		else
-		      		{
-		      			 $sql = "UPDATE tbl_sanpham SET spMa='$ID',spTen= '$name' ,spMota='$moTa', spGia='$gia',spTinhtrang='$tinhTrang',loaiMa='$loaiMa',thMa='$maTh' where spMa='$ID' "; 
-				         $query = mysqli_query($conn, $sql);
-		      		}
-				         ?>
+	    		if(isset($name))
+	    		{
+		    			$sql1 = "UPDATE tbl_sanpham SET spTen='$name'where spMa='$ID' "; 
+					         $query1 = mysqli_query($conn, $sql1);
+				}
+	    		if(isset($moTa))
+	    		{
+		    			$sql1 = "UPDATE tbl_sanpham SET spMota='$moTa'where spMa='$ID' "; 
+					         $query1 = mysqli_query($conn, $sql1);
+				}
+		      	if($gia < 0)
+	    		{
+	    			?>
+				    		<script>
+				    			alert("Giá không được nhỏ hơn 0");
+				    			window.history.back();
+				    		</script>
+				    		<?php
+	    		}
+	    		else
+	    		{
+		    			$sql1 = "UPDATE tbl_sanpham SET spGia='$gia'where spMa='$ID' "; 
+					         $query1 = mysqli_query($conn, $sql1);
+				}
+					if(!array_key_exists($test, $allowed)) 
+				    	{
+				    		?>
+				    		<script>
+				    			alert("Vui lòng chọn đúng file ảnh");
+				    			window.history.back();
+				    		</script>
+				    		<?php
+				    	}
+				    	else
+				    	{
+			    			if($img != null)
+				      		{
+				      			$tmp_img = $_FILES["hinh"]["tmp_name"];
+					      		$img = $_FILES['hinh']['name'];
+					      		move_uploaded_file($tmp_img, $path);
+					      		$sql = "UPDATE tbl_sanpham SET spHinh ='$img' where spMa='$ID' ";
+					      		$query = mysqli_query($conn, $sql);
+				      		}
+						}
+						if($loaiMa!=null)
+			      		{
+			      			$sql1 = "UPDATE tbl_sanpham SET loaiMa='$loaiMa'where spMa='$ID' "; 
+					         $query1 = mysqli_query($conn, $sql1);
+			      		}
+			      		if($maTh !=null)
+			      		{
+			      			 $sql = "UPDATE tbl_sanpham SET thMa='$maTh' where spMa='$ID' "; 
+					         $query = mysqli_query($conn, $sql);
+			      		}
+			}
+			?>
 						<script>
 							window.location='index.php?quanly=tbl_product';
 						</script>
-						<?php
-					}
-			}
-		}
+
+			<?php
 	}
 ?>
 
@@ -143,6 +161,7 @@
 	</form>
 </div>
 <!-------checkdirto---->
+
 <script>
     // Thay thế <textarea id="post_content"> với CKEditor
     

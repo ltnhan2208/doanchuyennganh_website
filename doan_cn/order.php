@@ -2,8 +2,7 @@
 	
 	require("includes/connection.php");
 	include ("includes/header.php");
-	$sql = "SELECT * from tbl_hoadon order by hdNgaytao desc ";
-	$query = mysqli_query($conn, $sql);
+	
 
 ?>
 <br/><br/>
@@ -12,7 +11,7 @@
 		<div class="row">
 			<div class="col-12">
 			<?php
-				$sql = "select * from tbl_hoadon where khMa = '$_SESSION[khMa]'";
+				$sql = "SELECT * from tbl_hoadon where khMa = '$_SESSION[khMa]' order by hdNgaytao DESC ";
 				$query = mysqli_query($conn,$sql);
 				$numrow=mysqli_num_rows($query);
 				if($numrow>0)
@@ -57,7 +56,7 @@
 				}
 				else
 				{
-					echo "<h4>Bạn chưa có thông tin hóa đơn nào</h4>";
+					echo "<h4>Bạn chưa có hóa đơn nào</h4>";
 				}
 				
 			 ?>

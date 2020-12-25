@@ -29,7 +29,12 @@
     	{
     		if($gia < 0)
     		{
-    			echo "Giá không được nhỏ hơn 0";
+    			?>
+				    		<script>
+				    			alert("Giá không được nhỏ hơn 0");
+				    			window.history.back();
+				    		</script>
+				    		<?php
     		}
     		else
     		{

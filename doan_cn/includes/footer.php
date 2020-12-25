@@ -20,7 +20,7 @@
 					</div>
 				
 					<div class="col-sm-12 col-xs-12 col-lg-3 col-md-3">
-						<ul class="ul-footer"><label><h6>Thông tin iên hệ</h6></label>
+						<ul class="ul-footer"><label><h6>Thông tin liên hệ</h6></label>
 							<br/>
 							<li class="footer-info"><a href="#">
 								<i class="fas fa-map-marker-alt" style="font-size: 20px;"> &nbsp;  </i>180/ Cao Lõ, quận 8, th.HCM</a>

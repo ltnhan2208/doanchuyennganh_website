@@ -66,7 +66,7 @@
 			</div>
 			<br/><br/><br/>
 			<div class="col-12" style="text-align: right;">
-				<h5>Total Price:&nbsp;<span class="show__total"><?php echo $total ?> VND</span></h5>		
+				<h5>Total Price:&nbsp;<span class="show__total"><?php echo number_format($total) ?> VND</span></h5>		
 			</div>
 		</div>
 	</div>

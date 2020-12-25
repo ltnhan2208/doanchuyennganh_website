@@ -1,5 +1,6 @@
 <?php 
-	$sql = "select * from tbl_sanpham where spMa = '$_GET[id_detail]'";
+$id=isset($_GET['id_detail'])?$_GET['id_detail']:'';
+	$sql = "select * from tbl_sanpham where spMa = '$id'";
 	$query = mysqli_query($conn,$sql);
 	$data = mysqli_fetch_array($query);
 ?>
@@ -15,7 +16,7 @@
 				<div class="box_info">
 					<div class="row justify-content-around" style="border-bottom:1px solid lightgray;">
 						<div class="col-2">Hình ảnh sản phẩm:</div>
-						<div class="col-5"><img style="width:200px;height: 150px" src="images/img_product/<?php echo $data["spHinh"]; ?>"/></div>
+						<div class="col-5"><img style="width:200px;height: 150px" src="./images/img_product/<?php echo $data["spHinh"]; ?>"/></div>
 					</div>
 					
 					<div class="row justify-content-around" style="border-bottom:1px solid lightgray;">
@@ -44,7 +45,7 @@
 				<div class="row justify-content-around">
 				<form method="POST" action="detail_product.php?show=show_detail">
 				<button type="submit" name="btn_buy"  style="color:white; background-color: #113890;border:0;padding: 10px 10px;outline: none"><div class="add_to_cart" >
-									<?php echo '<a href="addtocard.php?spMa='.$data['spMa'].'&action=add&soluong=1" style="color:white;">Đặt hàng</a>'; ?>
+									<?php echo '<a href="./addtocard.php?spMa='.$data['spMa'].'&action=add&soluong=1" style="color:white;">Đặt hàng</a>'; ?>
 							</div></button>
 				</form>
 				</div>	

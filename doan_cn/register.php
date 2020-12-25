@@ -7,7 +7,7 @@
 			<!------End left space -------->
 			<div class="col-lg-6 col-sm-12">
 				<div class="box__login--over_background "></div>
-				<form class="form__login " action="register" method="POST" enctype="multipart/form-data">
+				<form class="form__login " action="register.php" method="POST" enctype="multipart/form-data">
 					<h2><i>REGISTER</i></h2>
 							<label >Username</label>
 							<span >:&nbsp;<input type="text" name="username"  /></span>

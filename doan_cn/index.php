@@ -64,7 +64,7 @@ if($outofstock!=null)
 					echo '
 					<div class="col-lg-3 col-sm-12 ">
 						<div class="content__product--item">
-							<div class="show__detail" id="show__detail"><a href="detail_product.php?show=show_detail&id_detail='.$data["spMa"].'"><i class="fa fa-arrows-alt" style="color:white;font-size: 25px;"></i></a></div>
+							<div class="show__detail" id="show__detail"><a href="detail_product.php?id_detail='.$data["spMa"].'"><i class="fa fa-arrows-alt" style="color:white;font-size: 25px;"></i></a></div>
 							<img id="item__img" class="item__img" src="images/img_product/'.$data["spHinh"].'" />
 							<br/>
 							<div class="item__detail">
@@ -109,7 +109,7 @@ if($outofstock!=null)
 						<h3><?php echo $data2['spTen'] ?></h3>
 						<h4>Giá: <?php echo number_format($data2['spGia'])?> VND </h4><br/>
 						<div class="mota"><?php echo $data2['spMota'] ?></div><br/>
-						<a href="detail_product.php?show=show_detail&id_detail=<?php echo $data2['spMa']?> "><button>Xem thêm</button></a>
+						<a href="detail_product.php?id_detail=<?php echo $data2['spMa']?> "><button>Xem thêm</button></a>
 					</div>
 					<br/>
 				</div>
@@ -135,7 +135,7 @@ if($outofstock!=null)
 				echo '
 					<div class="col-lg-3 col-sm-12 ">
 						<div class="content__product--item">
-							<div class="show__detail" id="show__detail"><a href="detail_product.php?show=show_detail&id_detail='.$data["spMa"].'"><i class="fa fa-arrows-alt" style="color:white;font-size: 25px;"></i></a></div>
+							<div class="show__detail" id="show__detail"><a href="detail_product.php?id_detail='.$data["spMa"].'"><i class="fa fa-arrows-alt" style="color:white;font-size: 25px;"></i></a></div>
 							<img id="item__img" class="item__img" src="images/img_product/'.$data["spHinh"].'" />
 							<br/>
 							<div class="item__detail">
@@ -144,7 +144,7 @@ if($outofstock!=null)
 								
 							</div>
 							<div class="add_to_cart" >
-								<a href="addtocard.php?spMa='.$data['spMa'].'&action=add&soluong=1"><div>Thêm vào giỏ hàng</div></a>
+								<a href="addtocard.php?spMa='.$data['spMa'].'&action=add&soluong=1&tinhtrang='.$data['spTinhtrang'].'"><div>Thêm vào giỏ hàng</div></a>
 							</div>
 						</div>
 					</div> ';				}

@@ -1,4 +1,3 @@
-
 <ul class="top__bar--menu">
 	<div style="color:white">
 		Hi &nbsp;<?php echo $_SESSION["admin"]["adTen"]; ?>

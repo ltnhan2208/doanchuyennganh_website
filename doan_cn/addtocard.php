@@ -2,7 +2,7 @@
 	session_start();
 	error_reporting(0);
 $tinhtrang=$_GET['tinhtrang'];
-echo $tinhtrang;
+
 $tam= isset($_SESSION['cart'])?$_SESSION['cart']:[];
 $action= isset($_GET['action'])?$_GET['action']:'';
 if ($action=='add')
@@ -24,8 +24,8 @@ if ($action=='add')
 	}
 	else
 	{
-
-		echo "<script>location.href='index.php?alertoutofstock=1';</script>";
+		 echo "<script>location.href='index.php?alertoutofstock=1';</script>";
+	
 	}
 	
 }

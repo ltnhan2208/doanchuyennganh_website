@@ -11,7 +11,7 @@
 				<div class="box_info">
 					<div class="row justify-content-around">
 						<div class="col-2">Avatar:</div>
-						<div class="col-5"><img style="width:200px;height: 150px;box-shadow: 5px 10px lightgray;" src="images/img_customer/<?php echo $_SESSION["khHinh"]; ?>"/></div>
+						<div class="col-5"><img style="width:200px;height: 150px;box-shadow: 5px 10px lightgray;" src="images/img_customer/<?php echo $_SESSION["khHinh"]; ?>"  alt="Chưa có ảnh đại diện"/></div>
 					</div>
 					<br/>
 					<div class="row justify-content-around">

@@ -46,7 +46,7 @@ if (!isset($_GET["id"]))
 		 <input class="input_readonly" readonly type="text" name="ID" value="<?php echo $data["adMa"] ?>" />
 		<br/> <br/>
 		 <span>Tên tài khoản</span><br/>
-		 <input type="text" readonly name="username"value="<?php echo $data["adTen"] ?>"/>
+		 <input readonly type="text" name="username"value="<?php echo $data["adTen"] ?>"/>
 		<br/> <br/>
 		 <span>Email</span><br/>
 		 <input type="email" name="email"value="<?php echo $data["adEmail"] ?>"/>

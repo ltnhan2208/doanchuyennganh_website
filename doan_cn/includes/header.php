@@ -30,20 +30,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
 </head>
 <body>
-    <h5><a href="https://github.com/ltnhan2208/DH51700752_thuchanhlaptrinhweb">Link source code:https://github.com/ltnhan2208/DH51700752</a></h5>
+     <a href="https://github.com/ltnhan2208/doanchuyennganh_website">Link source: https://github.com/ltnhan2208/doanchuyennganh_website</a>
 	<section class="contact">
 		<div class="container-fluid">
+		    
 			 <i class="fas fa-chevron-up" id="scroll" style="font-size: 30px;"></i>
+			
 			<div class="row">
 				<div class="container">
 					<br/>
-					
 					<div class="row ">
-					    
 					<div class="col-6">
-					    
 						<div class="social__network">
-						    
 							<div class="top__bar--logo">
 								<img src="images/logo.png" alt="">
 							</div>
@@ -152,7 +150,7 @@
 										</ul>
 									</li>
 									<li><a href="./about-us.php"><i class="fas fa-users" style="font-size: 28px;"></i><br/>About us</a></li>
-									<li><a><i class="fas fa-hands-helping" style="font-size: 28px;"></i><br/>Help</a></li>
+									<li><a><i class="fas fa-hands-helping" style="font-size: 28px;"></i><br/>Recruitment</a></li>
 									<li><a><i class="fab fa-servicestack" style="font-size: 28px;"></i><br/>Service</a></li>
 									
 										<?php  
@@ -164,7 +162,7 @@
 										}
 										else
 										{
-										echo '<li><img style="width:35px;height: 35px;border-radius:50%;" src="images/img_customer/'. $_SESSION["khHinh"].'"/><br/>
+										echo '<li><img style="width:35px;height: 35px;border-radius:50%;" src="images/img_customer/'. $_SESSION["khHinh"].'" alt="Chưa thêm ảnh"/><br/>
 													 '.$_SESSION["khTen"].'
 												<ul class="child__menu child__menu--info">
 													<li><a href="./infomation.php?show=show_info" ><img style="width:25px;height: 25px;border-radius:50%;" src="images/img_customer/'. $_SESSION["khHinh"].'"/>Infomation</a></li>
